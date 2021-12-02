@@ -1,0 +1,20 @@
+.button {
+  color: #838383;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  margin: 16px;
+  background: linear-gradient(145deg, #ffffff, #c4c6c9);
+  border-radius: 100%;
+  box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #ffffff;
+}
+
+.button:active {
+  background: #f1f9ff;
+  box-shadow: inset 11px 11px 22px #d6dadd, inset -11px -11px 22px #fcffff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

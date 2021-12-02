@@ -1,0 +1,58 @@
+.menuButton {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    &:focus {
+        outline: 0;
+    }
+
+    >span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        transition: .4s ease;
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: .5rem;
+        content: "";
+        width: 2rem;
+        height: .125rem;
+        background: rgba(#000, .6);
+        transition: .4s ease;
+    }
+    &:nth-child(1)::before { top: .75rem; }
+    &:nth-child(2)::before { top: 1.375rem; }
+    &:nth-child(3)::before { top: 2rem; }
+    }
+    &:hover > span::before {
+        background:#000;
+    }
+    &.active {
+        span:nth-child(1) {
+            transform: rotate(45deg);
+            &::before {
+                top: calc(1.5rem - 1px);
+            }
+        }
+        span:nth-child(2) {
+            opacity: 0;
+            width: 0;
+        }
+        span:nth-child(3) {
+            transform: rotate(-45deg);
+            &::before {
+                top: calc(1.5rem - 1px);
+            }
+        }
+    }
+}
